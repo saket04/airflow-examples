@@ -47,4 +47,5 @@ for i in range(10):
         op_kwargs={'random_base': float(i)/10},
         dag=dag)
 
-    task.set_upstream(run_this)
+    #task.set_upstream(run_this)
+    run_this >> task
